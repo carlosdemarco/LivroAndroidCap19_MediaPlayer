@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<TextView android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="Player MP3"/>
+	<EditText android:id="@+id/arquivo"  
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="/sdcard/linkin_park1.mp3"/>
+	<LinearLayout android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+		<ImageButton android:id="@+id/start" 
+			android:src="@drawable/img_start"
+			android:layout_width="wrap_content"	
+			android:layout_height="wrap_content"/>
+		<ImageButton android:id="@+id/pause" 
+			android:src="@drawable/img_pause"
+			android:layout_width="wrap_content"	
+			android:layout_height="wrap_content"/>
+		<ImageButton android:id="@+id/stop" 
+			android:src="@drawable/img_stop"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<Button android:id="@+id/stopService"
+			android:layout_width="wrap_content"	
+			android:layout_height="wrap_content"
+			android:text="Para serviço"/>
+	</LinearLayout>
+</LinearLayout>
+

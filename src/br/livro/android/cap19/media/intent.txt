@@ -1,0 +1,36 @@
+public class TesteIntent extends BaseButtonActivity {
+
+	/**
+	 * @see br.livro.android.cap5.intent.BaseButtonActivity#getTexto()
+	 */
+	protected String getTexto() {
+		return "Teste de Intent";
+	}
+
+	/**
+	 * @see android.view.View$OnClickListener#onClick(android.view.View)
+	 */
+	public void onClick(View view) {
+		video();
+	}
+
+	private void video() {
+		Intent i = new Intent();
+		i.setAction(Intent.ACTION_VIEW);
+//		i.setData(Uri.parse("content://media/external/video/media/1"));
+		i.setData(Uri.parse("file:///sdcard/last_mohicans.3gp"));
+		i.addCategory("android.intent.category.LAUNCHER");
+		i.setComponent(new ComponentName("com.android.camera","com.android.camera.MovieView"));
+		startActivity(i);
+	}
+
+	private void img() {
+		Intent i = new Intent();
+		i.setAction(Intent.ACTION_VIEW);
+//		i.setData(Uri.parse("content://media/external/images/media/10"));
+		i.setData(Uri.parse("file:///sdcard/IMAG0021.jpg"));
+		i.addCategory("android.intent.category.LAUNCHER");
+		i.setComponent(new ComponentName("com.android.camera","com.android.camera.ViewImage"));
+		startActivity(i);
+	}
+}
